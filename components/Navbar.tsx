@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import Link from "next/Link";
+import Link from "next/link";
 
 const NavBar: React.FC = () => (
   <>
