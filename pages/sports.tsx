@@ -2,10 +2,10 @@ import React from "react";
 import Layout from "../components/Layout";
 import FetchData from "../components/FetchData";
 
-const Technology: React.FC = () => (
+const Sports: React.FC = () => (
   //   <Layout>
-  <FetchData section="/technology" />
+  <FetchData section="/sports" />
   //   </Layout>
 );
 
-export default Technology;
+export default Sports;

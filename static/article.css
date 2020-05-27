@@ -1,0 +1,62 @@
+.articleCard {
+  margin: 1%;
+}
+#card-container {
+  flex-direction: column !important;
+}
+.bookmarkIcon {
+  padding-left: 10px;
+  width: 30px;
+  height: 30px;
+  color: red;
+  cursor: pointer;
+}
+
+.moreIcon {
+  transform: scale(1.7);
+  float: right;
+}
+
+.articleImg {
+  margin: 0 1% 1% 1%;
+  object-fit: cover;
+}
+
+.mobile-articleImg {
+  margin: auto;
+  object-fit: cover;
+  width: 90%;
+}
+.mobile-toast {
+  position: absolute;
+  /* top: -55px; */
+  max-width: inherit !important;
+  font-size: 16px;
+  color: black;
+  /* margin-left: 50%; */
+}
+.pc-toast {
+  position: absolute;
+  /* top: 0.1%; */
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+.toast {
+  text-align: center;
+}
+.more {
+  margin: 0 !important;
+}
+
+#pc-setTop {
+  top: 0.1%;
+}
+#mobile-setTop {
+  top: -55px;
+}

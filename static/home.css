@@ -1,0 +1,71 @@
+/* .cardlist-container {
+  margin: 1%;
+}
+.mobile-cardlist-container {
+  margin: 3%;
+} */
+.pc-card-img {
+  width: 300px !important;
+  text-align: center;
+  height: 200px;
+  object-fit: cover;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+.mobile-card-img {
+  text-align: center;
+  height: 200px;
+  object-fit: cover;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+.moveTop {
+  margin-top: -30px !important;
+}
+.imgBody {
+  flex: inherit !important;
+  /* width: 25%; */
+}
+.card-body {
+  /* flex: inherit !important; */
+  margin: auto;
+}
+.noMargin {
+  margin: 0 !important;
+}
+.card-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  flex-direction: row !important;
+  margin: 1.5%;
+  cursor: pointer;
+}
+.mobile-card-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 3%;
+  cursor: pointer;
+}
+.card-title {
+  line-height: 1 !important;
+  margin-top: 5px !important;
+  font-weight: 700 !important;
+}
+#cardBadge {
+  margin-right: 1.5%;
+  right: 0;
+  position: absolute;
+  margin-top: 1%;
+}
+
+#mobileCardBadge {
+  margin-right: 7%;
+  right: 0;
+  position: absolute;
+  margin-top: 1%;
+}
+.card-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
