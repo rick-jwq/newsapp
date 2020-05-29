@@ -36,7 +36,7 @@ const override = css`
 const ArticleCard: React.FC<ArticleProps> = ({ article, isLoading }) => {
   //   let savedBookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
   let savedBookmarks = JSON.parse("[]");
-  const [saved, setSaved] = useState();
+  const [saved, setSaved] = useState(false);
   const [show, setShow] = useState(false);
   const [reloaded, setReloaded] = useState(false);
   const [showArrow, setShowArrow] = useState(true);
@@ -85,7 +85,7 @@ const ArticleCard: React.FC<ArticleProps> = ({ article, isLoading }) => {
   } else if (reloaded === false && isLoading === false) {
     const found: boolean =
       savedBookmarks.find((item: any) => {
-        return article && article.id === item.id;
+        return item && article && article.id === item.id;
       }) !== undefined;
     setSaved(found);
     setReloaded(true);

@@ -11,8 +11,8 @@ const newsTypeSlice = createSlice<NewsTypeState, NewsTypeActions>({
   name: "newsType",
   initialState: "Guardian",
   reducers: {
-    init: (state, action) => action.payload,
-    switchType: (state, action) => (state === "Guardian" ? "NYTimes" : state)
+    init: (_state, action) => action.payload,
+    switchType: (state, _action) => (state === "Guardian" ? "NYTimes" : state)
   }
 });
 

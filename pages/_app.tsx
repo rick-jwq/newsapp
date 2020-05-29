@@ -9,7 +9,7 @@ import "../static/article.css";
 // import { BrowserRouter } from "react-router-dom";
 
 import { Provider as ReduxProvider } from "react-redux";
-import createStore from "../configure/store";
+import configStore from "../configure/store";
 import Layout from "../components/Layout";
 export default class MyApp extends App {
   render() {
@@ -24,7 +24,7 @@ export default class MyApp extends App {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <ReduxProvider store={createStore()}>
+        <ReduxProvider store={configStore()}>
           <Layout>
             <Component {...pageProps} />
           </Layout>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import ArticlePage from "../../components/articlePage";
-import Layout from "../../components/Layout";
+// import Layout from "../../components/Layout";
 const Article: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;

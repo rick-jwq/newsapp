@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ArticleCard from "./ArticleCard";
 import { Article } from "../interfaces/article";
 import { url } from "../constants";
+import { useStore } from "react-redux";
 
 type Props = {
   id: string;
@@ -10,7 +11,12 @@ type Props = {
 const ArticlePage: React.FC<Props> = ({ id }) => {
   //   let params = new URL(window.location.href).searchParams;
   //   let id = params.get("id") || "";
-  const type = "guardian";
+
+  const store = useStore();
+  const { newsType } = store.getState();
+  console.log(newsType);
+
+  // const type = "guardian";
   // window.location.href.search("https://www.nytimes.com") >= 0
   //   ? "nytimes"
   //   : "guardian";
@@ -22,19 +28,18 @@ const ArticlePage: React.FC<Props> = ({ id }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(url + type + "/article/" + id)
+    fetch(url + newsType.toLowerCase() + "/article/" + id)
       .then(response => {
         return response.json();
       })
       .then(data => {
-        // if (type === "nytimes") loadNYTArticle(data);
-        // else
-        loadGuardianArticle(data);
+        if (newsType === "NYTimes") loadNYTArticle(data);
+        else loadGuardianArticle(data);
       })
       .catch(error => {
         console.log(error);
       });
-  }, [type, id]);
+  }, [newsType, id]);
 
   const loadNYTArticle = (data: any) => {
     const title = data.docs[0].headline.main;

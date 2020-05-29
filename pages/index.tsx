@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Layout from "../components/Layout";
+// import Layout from "../components/Layout";
 import FetchData from "../components/FetchData";
 import { useDispatch } from "react-redux";
 import newsTypeSlice from "../redux/newsType";
